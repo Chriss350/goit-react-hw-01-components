@@ -1,12 +1,21 @@
-const TransactionHistoryItem = props => {
-  console.log(props);
+import PropTypes from 'prop-types';
+
+const TransactionHistoryItem = ({ data }) => {
   return (
     <tr>
-      <td>{props.data.type}</td>
-      <td>{props.data.amount}</td>
-      <td>{props.data.currency}</td>
+      <td>{data.type}</td>
+      <td>{data.amount}</td>
+      <td>{data.currency}</td>
     </tr>
   );
+};
+
+TransactionHistoryItem.propTypes = {
+  data: PropTypes.shape({
+    type: PropTypes.string,
+    amount: PropTypes.string,
+    currency: PropTypes.string,
+  }),
 };
 
 export { TransactionHistoryItem };

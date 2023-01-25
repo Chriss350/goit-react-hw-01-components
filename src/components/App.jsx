@@ -33,7 +33,7 @@ export const App = () => {
       </div>
       <div className={style.box}>
         <h2>4 - Historia transakcji</h2>
-        <TransactionHistory items={transactions} />
+        <TransactionHistory data={transactions} />
       </div>
     </div>
   );
